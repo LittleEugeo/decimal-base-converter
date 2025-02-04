@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@theme {
+    --color-blue: hsl(204, 57%, 54%);
+    --color-btnRed: hsl(354, 70%, 54%);
+    --color-btnBlue: hsl(211, 100%, 43%);
+    --color-footer: hsl(0, 0%, 24%);
+    --shadow-shadowContainer: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    --shadow-shadowRed: 0px 0px 9px rgb(220, 56, 72);
+    --shadow-shadowBlue: 0px 0px 9px rgb(0, 106, 219);
+    --breakpoint-xs: 400px;
+}
+
+@layer components {
+    .btns-primary {
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        padding: 13px 10px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 17px;
+        border-radius: 5px;
+        cursor: pointer;
+        user-select: none;
+        color: #fff;
+        box-shadow: 0px 0px;
+        transition: box-shadow 0.15s ease-in-out;
+    }
+
+    .shadow-red:hover {
+        box-shadow: var(--shadow-shadowRed);
+    }
+
+    .shadow-blue:hover {
+        box-shadow: var(--shadow-shadowBlue);
+    }
+}
