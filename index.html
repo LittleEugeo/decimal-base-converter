@@ -43,6 +43,13 @@
     <div class="flex justify-center items-center min-h-13 bg-footer font-bold tracking-wider text-[18px] text-white">
         <p>Decimal Converter</p>
     </div>
+    <div id="modal" class="absolute w-screen min-h-screen flex justify-center items-center p-5 bg-modalBackground">
+        <div class="relative min-w-50 w-full max-w-[680px] min-h-[600px] flex flex-col justify-center items-center rounded-lg p-10 gap-3 shadow-shadowModal bg-white animate-appear">
+            <h2 class="text-5xl font-bold tracking-wide text-center">Enter a value</h2>
+            <p class="text-2xl text-balance text-center">The value must be positive.</p>
+            <button id="btn-close-modal" class="absolute top-5 right-8 font-extrabold text-[22px] cursor-pointer text-red-700 animate-bounce">X</button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

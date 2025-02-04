@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const resulBinary = document.getElementById('resul-binary');
     const resulOctal = document.getElementById('resul-octal');
     const resulHexadecimal = document.getElementById('resul-hexadecimal');
+    const windowModal = document.getElementById('modal');
+    const btnCloseModal = document.getElementById('btn-close-modal');
 
     const clearValues = () => {
         numberToConvert.value = '';
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnCalculate.addEventListener('click', () => {
         if (numberToConvert.value <= 0 || numberToConvert.value === '') {
-            alert('Ingresa un número');
+            windowModal.classList.remove('hidden');
         } else {
             convertToBinary(numberToConvert.value);
             convertToOctal(numberToConvert.value);
@@ -61,4 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     btnDelete.addEventListener('click', clearValues);
+
+    btnCloseModal.addEventListener('click', () => {
+        windowModal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            windowModal.classList.add('hidden');
+        }
+    })
 });
